@@ -1,0 +1,10 @@
+{
+	"statements": {
+		"for": {
+			"synopsis": "@ ([init], [conditional], [post operation]) { ... }"
+		},
+		"for...in": {
+			"synopsis": "@ ([iterator], @ [object]) { ... }"
+		}
+	}
+}

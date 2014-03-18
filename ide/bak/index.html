@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Syntax Highlighting</title>
+<link href="./rainbow/themes/blackboard.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="./rainbow/rainbow.js"></script>
+    <script src="./rainbow/language/generic.js"></script>
+    <script src="./rainbow/language/javascript.js"></script>
+</head>
+<body style="background:black;">
+    <style>
+    code
+    {
+        color: #fff;
+        font-family: "Lucida Console", "Monaco", monospace;
+        /*white-space: pre;*/
+        /* You have to use <pre> instead of css:white-space, fix it later...*/
+    }
+    </style>
+
+    <pre><code id="ohhai" data-language="javascript"></code></pre>
+
+<script type="text/javascript">
+
+    if (typeof window.codeWhee === 'undefined') {
+        window.codeWhee = '';
+    }
+
+    function omglee(e) {
+        e = e || window.event;
+        var charCode = (typeof e.which == "number" && e.which !== 0) ? e.which : e.keyCode;
+        console.debug(e);
+        console.log(String.fromCharCode(charCode));
+        if (charCode) {
+            console.log(window.codeWhee + 'INASWITCH');
+            switch (charCode) {
+                case 8:
+                    console.log('OMG');
+                    var hi = window.codeWhee.slice(0, -1);
+                    window.codeWhee = hi;
+                    break;
+                case 13:
+                    window.codeWhee += "\n";
+                    break;
+                default:
+                    window.codeWhee += String.fromCharCode(charCode);
+                    break;
+            }
+            //document.getElementById('ohhai').innerHTML = window.codeWhee;
+            Rainbow.color(window.codeWhee, 'javascript', function(codaroo) {
+                document.getElementById('ohhai').innerHTML = codaroo;
+                console.log(codaroo);
+                console.log(window.codeWhee);
+                //console.log(codaroo.replace(/<span class="(.*)">/i, null));
+            });
+        }
+    }
+
+    /* onkeypress is only for character (printable) keys, onkeydown/up is for backspace, etc. */
+    document.onkeypress = function(e) {
+        if (typeof window.tracker_kp === 'undefined') {
+            window.tracker_kp = 0;
+        } else {
+            window.tracker_kp++;
+        }
+        omglee(e);
+    }
+
+    document.onkeyup = function(e) {
+        if (typeof window.tracker_ku === 'undefined') {
+            window.tracker_ku = 0;
+        } else {
+            window.tracker_ku++
+        }
+        if (window.tracker_kp != window.tracker_ku) {
+            window.tracker_kp = 0;
+            window.tracker_ku = 0;
+            //return false;
+            var charCode = (typeof e.which == "number" && e.which !== 0) ? e.which : e.keyCode;
+            if (charCode) {
+                console.log('BOTTOMSWITCH');
+                console.log(charCode);
+                switch (charCode) {
+                    case 8:
+                        console.log('OMG');
+                        window.codeWhee = window.codeWhee.slice(0, -1);
+                        break;
+                }
+            }
+        } else if (window.tracker_ku == window.tracker_kp) {
+            return false;
+        }
+    };
+
+</script>
+
+
+</body>

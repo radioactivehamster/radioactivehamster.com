@@ -1,0 +1,78 @@
+body, code, div, pre, #ed, #ed-ln-num, #ed-pre
+{
+    border: 0;
+    margin: 0;
+    padding: 0;        
+}
+
+body
+{
+    background:#ccc;
+    font-size: 100%;
+    line-height: 16px;
+}
+
+div
+{
+    color: #fff;
+    font-family: "Lucida Console", "Monaco", monospace;
+    font-size: 1em;
+}
+
+div#wrapper
+{
+    height: auto !important;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+div#ed-ln-num
+{
+    height: auto !important;
+    min-height: 100%;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    float: left;
+    background: #555;
+    text-align: right;
+    width: 3em;
+    height: 1em;
+    border-right: 1px solid orange;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 
+                 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 
+                 0 0 150px #ff00de;
+}
+
+code
+{
+    color: #fff;
+    font-family: "Lucida Console", "Monaco", monospace;
+    font-size: 1em;
+    /* Totally sweet text glow from: 
+    http://line25.com/articles/using-css-text-shadow-to-create-cool-text-effects
+    */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 
+                 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 
+                 0 0 150px #ff00de;
+}
+
+#anchor
+{
+    position: absolute;
+    bottom: 0;
+    height: 1em;
+}
+
+#ed-pre
+{
+    white-space: normal; /* Disable this tag for Rainbow compatability */
+}
+
+code#ed
+{
+    white-space: pre;
+    padding-left: 0.5em;
+    background: #444;
+    width: 100%;
+}
