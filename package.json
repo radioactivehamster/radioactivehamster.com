@@ -1,0 +1,32 @@
+{
+  "name": "@radioactivehamster/radioactivehamster.com",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/jbenner55/radioactivehamster.com.git"
+  },
+  "author": "James Benner <james.benner@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/jbenner55/radioactivehamster.com#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@radioactivehamster/date-time": "^0.1.2",
+    "babel": "^5.5.6",
+    "browser-sync": "^2.7.7",
+    "colors.css": "^2.3.0",
+    "csscomb": "^3.1.7",
+    "gulp": "^3.9.0",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-htmlmin": "^1.1.2",
+    "gulp-less": "^3.0.3",
+    "handlebars": "^3.0.3",
+    "less": "^2.5.1",
+    "links.css": "0.0.2",
+    "normalize.css": "^3.0.3"
+  }
+}
