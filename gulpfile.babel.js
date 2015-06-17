@@ -8,6 +8,11 @@ var htmlmin     = require('gulp-htmlmin');
 var less        = require('gulp-less');
 var stachio     = require('gulp-stachio');
 
+gulp.task('cp', () => {
+    return gulp.src('./vendor/any-old-icon/**/*.*')
+        .pipe(gulp.dest('./dist/vendor/any-old-icon'));
+});
+
 // Static server
 gulp.task('serve', ['template'], function () {
     browserSync.init({
@@ -15,7 +20,7 @@ gulp.task('serve', ['template'], function () {
         server: { baseDir: './dist/' }
     });
 
-    gulp.watch('./src/asset/less/**/*.less', ['style']);
+    gulp.watch('./src/asset/less/**/*.less', ['style']).on('change', browserSync.reload);
     gulp.watch('./src/template/**/*.hbs', ['template']).on('change', browserSync.reload);
 });
 

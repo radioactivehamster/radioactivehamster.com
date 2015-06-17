@@ -1,0 +1,246 @@
+@font-face {
+	font-family: 'any-old-icon';
+	src:url('fonts/any-old-icon.eot');
+	src:url('fonts/any-old-icon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/any-old-icon.woff') format('woff'),
+		url('fonts/any-old-icon.ttf') format('truetype'),
+		url('fonts/any-old-icon.svg#any-old-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'any-old-icon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-pavitra-s-tandon-only-goodness, .icon-ian-yates-y-fronts, .icon-pavitra-s-tandon-chat-for-lovers, .icon-muhamad-bahrul-ulum-log-out, .icon-muhamad-bahrul-ulum-log-in, .icon-justin-skull-ribbon, .icon-justin-burns-skull, .icon-justin-burns-skull-badge, .icon-designmodo-settings, .icon-designmodo-location, .icon-designmodo-like, .icon-cole-townsend-pencil, .icon-cole-townsend-check, .icon-cole-townsend-chat, .icon-ian-yates-porridge, .icon-ian-yates-mr-whippy, .icon-ian-yates-milk, .icon-aleks-dorohovich-rocket, .icon-vincent-gschwindemann-sun, .icon-vectortuts-pirate-panda, .icon-sanjit-saha-afro, .icon-samuel-sosina-command-line, .icon-quin-robinson-casual-shoe, .icon-michael-howarth-tardis, .icon-kenneth-bielinski-timer, .icon-juan-ortiz-zaforas-plug-f-female, .icon-juan-ortiz-zaforas-plug-c-female, .icon-juan-gomez-alzaga-rocking-horse, .icon-juan-gomez-alzaga-paint-brush, .icon-juan-gomez-alzaga-leaf, .icon-juan-gomez-alzaga-bird, .icon-jeffrey-herrera-beer-mug, .icon-jack-rugile-anchor, .icon-ilias-ismanalijev-batman, .icon-corinne-ducusin-doumbek, .icon-aleks-dorohovich-triforce, .icon-steve-debeus-farm, .icon-patrik-larsson-pokemon, .icon-patrik-larsson-pakman, .icon-ordog-zoltan-canon, .icon-johana-barretto-kitty, .icon-johana-barretto-kitty-stripy, .icon-jj-moi-manga-poison, .icon-jj-moi-manga-eye, .icon-jj-moi-kneel, .icon-dom-waters-speedo, .icon-dom-waters-knife, .icon-derek-mui-tie, .icon-derek-mui-invader, .icon-darren-reay-telephone-box, .icon-darren-reay-pen-nib, .icon-arno-hattingh-park, .icon-anton-boshoff-headset, .icon-joshua-barker-landscape, .icon-joshua-barker-house, .icon-jory-raphael-cart, .icon-johan-manuel-hernandez-record-player, .icon-danis-lou-joystick, .icon-christina-pedersen-walkman, .icon-christina-pedersen-cassette, .icon-chris-spittles-unpinned, .icon-chris-spittles-save, .icon-chris-spittles-pinned, .icon-chris-spittles-health, .icon-chris-spittles-geo-location, .icon-cesgra-globe, .icon-matt-hakes-spectacles, .icon-matt-hakes-moustache, .icon-ian-yates-creative-commons {
+	font-family: 'any-old-icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-pavitra-s-tandon-only-goodness:before {
+	content: "\e000";
+}
+.icon-ian-yates-y-fronts:before {
+	content: "\e001";
+}
+.icon-pavitra-s-tandon-chat-for-lovers:before {
+	content: "\e002";
+}
+.icon-muhamad-bahrul-ulum-log-out:before {
+	content: "\e003";
+}
+.icon-muhamad-bahrul-ulum-log-in:before {
+	content: "\e004";
+}
+.icon-justin-skull-ribbon:before {
+	content: "\e005";
+}
+.icon-justin-burns-skull:before {
+	content: "\e006";
+}
+.icon-justin-burns-skull-badge:before {
+	content: "\e007";
+}
+.icon-designmodo-settings:before {
+	content: "\e008";
+}
+.icon-designmodo-location:before {
+	content: "\e009";
+}
+.icon-designmodo-like:before {
+	content: "\e00a";
+}
+.icon-cole-townsend-pencil:before {
+	content: "\e00b";
+}
+.icon-cole-townsend-check:before {
+	content: "\e00c";
+}
+.icon-cole-townsend-chat:before {
+	content: "\e00d";
+}
+.icon-ian-yates-porridge:before {
+	content: "\e00e";
+}
+.icon-ian-yates-mr-whippy:before {
+	content: "\e00f";
+}
+.icon-ian-yates-milk:before {
+	content: "\e010";
+}
+.icon-aleks-dorohovich-rocket:before {
+	content: "\e011";
+}
+.icon-vincent-gschwindemann-sun:before {
+	content: "\e012";
+}
+.icon-vectortuts-pirate-panda:before {
+	content: "\e013";
+}
+.icon-sanjit-saha-afro:before {
+	content: "\e014";
+}
+.icon-samuel-sosina-command-line:before {
+	content: "\e015";
+}
+.icon-quin-robinson-casual-shoe:before {
+	content: "\e016";
+}
+.icon-michael-howarth-tardis:before {
+	content: "\e017";
+}
+.icon-kenneth-bielinski-timer:before {
+	content: "\e018";
+}
+.icon-juan-ortiz-zaforas-plug-f-female:before {
+	content: "\e019";
+}
+.icon-juan-ortiz-zaforas-plug-c-female:before {
+	content: "\e01a";
+}
+.icon-juan-gomez-alzaga-rocking-horse:before {
+	content: "\e01b";
+}
+.icon-juan-gomez-alzaga-paint-brush:before {
+	content: "\e01c";
+}
+.icon-juan-gomez-alzaga-leaf:before {
+	content: "\e01d";
+}
+.icon-juan-gomez-alzaga-bird:before {
+	content: "\e01e";
+}
+.icon-jeffrey-herrera-beer-mug:before {
+	content: "\e01f";
+}
+.icon-jack-rugile-anchor:before {
+	content: "\e020";
+}
+.icon-ilias-ismanalijev-batman:before {
+	content: "\e021";
+}
+.icon-corinne-ducusin-doumbek:before {
+	content: "\e022";
+}
+.icon-aleks-dorohovich-triforce:before {
+	content: "\e023";
+}
+.icon-steve-debeus-farm:before {
+	content: "\e024";
+}
+.icon-patrik-larsson-pokemon:before {
+	content: "\e025";
+}
+.icon-patrik-larsson-pakman:before {
+	content: "\e026";
+}
+.icon-ordog-zoltan-canon:before {
+	content: "\e027";
+}
+.icon-johana-barretto-kitty:before {
+	content: "\e028";
+}
+.icon-johana-barretto-kitty-stripy:before {
+	content: "\e029";
+}
+.icon-jj-moi-manga-poison:before {
+	content: "\e02a";
+}
+.icon-jj-moi-manga-eye:before {
+	content: "\e02b";
+}
+.icon-jj-moi-kneel:before {
+	content: "\e02c";
+}
+.icon-dom-waters-speedo:before {
+	content: "\e02d";
+}
+.icon-dom-waters-knife:before {
+	content: "\e02e";
+}
+.icon-derek-mui-tie:before {
+	content: "\e02f";
+}
+.icon-derek-mui-invader:before {
+	content: "\e030";
+}
+.icon-darren-reay-telephone-box:before {
+	content: "\e031";
+}
+.icon-darren-reay-pen-nib:before {
+	content: "\e032";
+}
+.icon-arno-hattingh-park:before {
+	content: "\e033";
+}
+.icon-anton-boshoff-headset:before {
+	content: "\e034";
+}
+.icon-joshua-barker-landscape:before {
+	content: "\e035";
+}
+.icon-joshua-barker-house:before {
+	content: "\e036";
+}
+.icon-jory-raphael-cart:before {
+	content: "\e037";
+}
+.icon-johan-manuel-hernandez-record-player:before {
+	content: "\e038";
+}
+.icon-danis-lou-joystick:before {
+	content: "\e039";
+}
+.icon-christina-pedersen-walkman:before {
+	content: "\e03a";
+}
+.icon-christina-pedersen-cassette:before {
+	content: "\e03b";
+}
+.icon-chris-spittles-unpinned:before {
+	content: "\e03c";
+}
+.icon-chris-spittles-save:before {
+	content: "\e03d";
+}
+.icon-chris-spittles-pinned:before {
+	content: "\e03e";
+}
+.icon-chris-spittles-health:before {
+	content: "\e03f";
+}
+.icon-chris-spittles-geo-location:before {
+	content: "\e040";
+}
+.icon-cesgra-globe:before {
+	content: "\e041";
+}
+.icon-matt-hakes-spectacles:before {
+	content: "\e042";
+}
+.icon-matt-hakes-moustache:before {
+	content: "\e043";
+}
+.icon-ian-yates-creative-commons:before {
+	content: "\e044";
+}
