@@ -15,19 +15,19 @@ gulp.task('serve', ['template'], function () {
         server: { baseDir: './dist/' }
     });
 
-    gulp.watch('style/**/*.less', ['style']);
-    gulp.watch('**/*.hbs', ['template']).on('change', browserSync.reload);
+    gulp.watch('./src/asset/less/**/*.less', ['style']);
+    gulp.watch('./src/template/**/*.hbs', ['template']).on('change', browserSync.reload);
 });
 
 gulp.task('style', function () {
-    return gulp.src('asset/less/**/*.less')
+    return gulp.src('./src/asset/less/main.less')
         .pipe(less())
         .pipe(csscomb())
         .pipe(gulp.dest('./dist/asset/css'));
 });
 
 gulp.task('template', function () {
-    return gulp.src('src/template/**/*.hbs')
+    return gulp.src('./src/template/**/*.hbs')
         .pipe(stachio({ timestamp: dateTime() }))
         //.pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
