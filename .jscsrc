@@ -3,7 +3,9 @@
     "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
     "requireCapitalizedConstructors": true,
     "requireCommaBeforeLineBreak": true,
+    "requirePaddingNewLinesAfterUseStrict": true,
     "requireParenthesesAroundIIFE": true,
+    "requireSpaceAfterLineComment": true,
     "requireSpaceBeforeBinaryOperators": [
         "=", "+=", "-=", "*=", "/=", "%=",
         "+", "-", "*", "/", "%", "&&",

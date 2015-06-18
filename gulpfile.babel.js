@@ -14,7 +14,7 @@ gulp.task('cp', () => {
 });
 
 // Static server
-gulp.task('serve', ['template'], function () {
+gulp.task('serve', ['template'], () => {
     browserSync.init({
         open: false,
         server: { baseDir: './dist/' }
