@@ -558,6 +558,29 @@ body
 
     background-color: #3b3b3b;
 }
+footer
+{
+    font-size: .8rem;
+    line-height: 1.5;
+
+    padding: 1.5rem;
+
+    color: #ddd;
+    background-color: #111;
+}
+footer a:link,
+footer a:visited
+{
+    color: #ddd;
+}
+footer a:hover
+{
+    color: #01ff70;
+}
+footer a[rel='license'] img
+{
+    border: thin solid #ddd;
+}
 #wrapper
 {
     margin: 0;
@@ -584,4 +607,13 @@ body
 #brand-marquee
 {
     border-bottom: .45rem solid #f00;
+}
+#spectacles-marquee
+{
+    font-size: 15rem;
+    font-weight: 500;
+
+    text-align: right;
+
+    color: #ccc;
 }

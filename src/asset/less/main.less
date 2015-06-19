@@ -19,6 +19,29 @@ body {
 	font-weight: 300;
 }
 
+footer {
+    padding: 1.5rem;
+    background-color: @black;
+    color: @silver;
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    a {
+        &:link,
+        &:visited {
+            color: @silver;
+        }
+
+        &:hover {
+            color: @lime;
+        }
+
+        &[rel="license"] img {
+            border: thin solid @silver;
+        }
+    }
+}
+
 #wrapper {
 	background-color: @color-radham-green;
 	margin: 0;
@@ -48,4 +71,11 @@ body {
 
 #brand-marquee {
     border-bottom: 0.45rem solid #ff0000;
+}
+
+#spectacles-marquee {
+    text-align: right;
+    font-size: 15rem;
+    font-weight: 500;
+    color: #ccc;
 }

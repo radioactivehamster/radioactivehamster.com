@@ -19,14 +19,13 @@
     "babel": "^5.5.6",
     "browser-sync": "^2.7.7",
     "colors.css": "^2.3.0",
-    "csscomb": "^3.1.7",
     "gulp": "^3.9.0",
     "gulp-csscomb": "^3.0.3",
-    "gulp-htmlmin": "^1.1.2",
+    "gulp-htmltidy": "^0.2.2",
     "gulp-less": "^3.0.3",
+    "gulp-stachio": "^0.1.0",
     "handlebars": "^3.0.3",
-    "less": "^2.5.1",
-    "normalize.css": "^3.0.3",
+    "js-yaml": "^3.3.1",
     "semantic-style": "^0.1.0"
   }
 }

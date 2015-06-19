@@ -3,8 +3,10 @@
 var browserSync = require('browser-sync').create();
 var csscomb     = require('gulp-csscomb');
 var dateTime    = require('@radioactivehamster/date-time');
+var fs          = require('fs');
 var gulp        = require('gulp');
-var htmlmin     = require('gulp-htmlmin');
+var htmltidy    = require('gulp-htmltidy');
+var jsYaml      = require('js-yaml');
 var less        = require('gulp-less');
 var stachio     = require('gulp-stachio');
 
@@ -24,17 +26,20 @@ gulp.task('serve', ['template'], () => {
     gulp.watch('./src/template/**/*.hbs', ['template']).on('change', browserSync.reload);
 });
 
-gulp.task('style', function () {
+gulp.task('style', () => {
     return gulp.src('./src/asset/less/main.less')
         .pipe(less())
         .pipe(csscomb())
         .pipe(gulp.dest('./dist/asset/css'));
 });
 
-gulp.task('template', function () {
+gulp.task('template', () => {
+    let htmltidyrc = jsYaml.load(fs.readFileSync('./.htmltidyrc').toString());
+
     return gulp.src('./src/template/**/*.hbs')
         .pipe(stachio({ timestamp: dateTime() }))
         //.pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(htmltidy(htmltidyrc))
         .pipe(gulp.dest('dist'));
 });
 
