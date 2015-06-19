@@ -1,84 +1,60 @@
-@import (inline) '../../../node_modules/semantic-style/dist/main.css';
+// @import (inline) '../../../node_modules/semantic-style/dist/main.css';
 @import (reference) '../../../node_modules/colors.css/less/colors.less';
+@import '_footer';
 
 // Yo dawg, I heard you like vars for colors.
-@color-radham-green: #9cff00;
+
+@color-radham-green:          #9cff00;
+@color-dark-gray:             #333;
+@embiggened-font-size:        15rem;
+@embiggened-font-size-plus:   18rem;
+@embiggened-font-weight:      500;
+@embiggened-font-weight-plus: 800;
 
 // Mixins for great justice!!!
+
 .helvetica () {
 	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 
-html, body {
-	height: 100%;
+.height-width-max () {
+    height: 100%;
+    width: 100%;
+}
+
+.spatial-reset () {
+    margin: 0;
+    padding: 0;
+}
+
+// Styles yo!
+
+html,
+body {
+    .height-width-max;
+    .spatial-reset;
 }
 
 body {
-	background-color: #3b3b3b;
-	.helvetica;
-	font-weight: 300;
-}
-
-footer {
-    padding: 1.5rem;
-    background-color: @black;
-    color: @silver;
-    font-size: 0.8rem;
-    line-height: 1.5;
-    width: 100%;
-
-    a {
-        &:link,
-        &:visited {
-            color: @silver;
-        }
-
-        &:hover {
-            color: @lime;
-        }
-
-        &[rel="license"] img {
-            border: thin solid @silver;
-        }
-    }
-}
-
-#wrapper {
-	background-color: @color-radham-green;
-	margin: 0;
-	//padding: 0;
-    padding-top: 5rem;
-}
-
-#brand {
-    //margin-top: 0;
-	//padding-top: 7rem;
-}
-
-#brand h1 {
-	font-size: 18rem;
-	font-weight: 800;
-	color: #fdfdfd;
-	line-height: 0.70rem;
-    margin-top: 1rem;
-	margin-left: 0;
-}
-
-#brand h1:last-of-type {
-	//margin-bottom: 0.01rem;
-    margin-bottom: 0;
-    padding-bottom: 6.1rem;
+    .helvetica;
 }
 
 #brand-marquee {
-    border-bottom: 0.45rem solid #ff0000;
+    .spatial-reset;
+    background-color: @color-radham-green;
+    border-bottom: 0.45rem solid tomato; // #ff0000
+    color: @white;
+    font-size: @embiggened-font-size-plus;
+    font-weight: @embiggened-font-weight-plus;
+    line-height: 13.4rem;
     width: 100%;
 }
 
 #spectacles-marquee {
-    text-align: right;
-    font-size: 15rem;
-    font-weight: 500;
+    background-color: @color-dark-gray;
     color: #ccc;
+    font-size: @embiggened-font-size;
+    font-weight: @embiggened-font-weight;
+    text-align: right;
     width: 100%;
 }
