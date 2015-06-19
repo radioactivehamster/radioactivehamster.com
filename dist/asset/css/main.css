@@ -563,6 +563,7 @@ footer
     font-size: .8rem;
     line-height: 1.5;
 
+    width: 100%;
     padding: 1.5rem;
 
     color: #ddd;
@@ -606,12 +607,16 @@ footer a[rel='license'] img
 }
 #brand-marquee
 {
+    width: 100%;
+
     border-bottom: .45rem solid #f00;
 }
 #spectacles-marquee
 {
     font-size: 15rem;
     font-weight: 500;
+
+    width: 100%;
 
     text-align: right;
 
