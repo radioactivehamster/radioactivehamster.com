@@ -10,37 +10,32 @@ var jsYaml      = require('js-yaml');
 var less        = require('gulp-less');
 var stachio     = require('gulp-stachio');
 
-gulp.task('cp', () => {
-    return gulp.src('./vendor/any-old-icon/**/*.*')
-        .pipe(gulp.dest('./dist/vendor/any-old-icon'));
-});
-
 // Static server
 gulp.task('serve', ['style', 'template'], () => {
     browserSync.init({
         open: false,
-        server: { baseDir: './dist/' }
+        server: { baseDir: './' }
     });
 
-    gulp.watch('./src/asset/less/**/*.less', ['style']).on('change', browserSync.reload);
-    gulp.watch('./src/template/**/*.hbs', ['template']).on('change', browserSync.reload);
+    gulp.watch('src/style/*.less', ['style']).on('change', browserSync.reload);
+    gulp.watch('src/template/*.hbs', ['template']).on('change', browserSync.reload);
 });
 
 gulp.task('style', () => {
-    return gulp.src('./src/asset/less/main.less')
+    return gulp.src('src/style/main.less')
         .pipe(less())
         .pipe(csscomb())
-        .pipe(gulp.dest('./dist/asset/css'));
+        .pipe(gulp.dest('asset/css'));
 });
 
 gulp.task('template', () => {
+    let cname      = fs.readFileSync('./CNAME').toString().trim();
     let htmltidyrc = jsYaml.load(fs.readFileSync('./.htmltidyrc').toString());
 
-    return gulp.src('./src/template/**/*.hbs')
-        .pipe(stachio({ timestamp: dateTime() }))
-        //.pipe(htmlmin({ collapseWhitespace: true }))
+    return gulp.src('src/template/*.hbs')
+        .pipe(stachio({ cname: cname, timestamp: dateTime() }))
         .pipe(htmltidy(htmltidyrc))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['style', 'template']);
