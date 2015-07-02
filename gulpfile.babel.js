@@ -1,6 +1,7 @@
 'use strict';
 
 var browserSync = require('browser-sync').create();
+var colorguard  = require('gulp-colorguard');
 var csscomb     = require('gulp-csscomb');
 var dateTime    = require('@radioactivehamster/date-time');
 var fs          = require('fs');
@@ -25,6 +26,7 @@ gulp.task('style', () => {
     return gulp.src('src/style/main.less')
         .pipe(less())
         .pipe(csscomb())
+        .pipe(colorguard().on('error', e => console.warn(e.message)))
         .pipe(gulp.dest('asset/css'));
 });
 
