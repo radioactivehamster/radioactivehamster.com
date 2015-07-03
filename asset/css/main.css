@@ -1,24 +1,26 @@
 footer
 {
-    font-size: .8rem;
-    line-height: 1.5;
+    line-height: .55;
 
     padding: 1.5rem;
 
     color: #ddd;
     background-color: #111;
 }
-footer a:hover
-{
-    color: #01ff70;
-}
 footer a:link,
 footer a:visited
 {
     color: #ddd;
 }
+footer a:hover
+{
+    color: #01ff70;
+}
 footer a[rel='license'] img
 {
+    width: 88px;
+    height: 31px;
+
     border: thin solid #ddd;
 }
 html,
