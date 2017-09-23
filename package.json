@@ -13,6 +13,9 @@
   "author": "James Benner <james.benner@gmail.com>",
   "license": "MIT",
   "homepage": "https://bitbucket.org/jbenner55/radioactivehamster.com#readme",
+  "config": {
+    "analyticsId": "UA-23925597-1"
+  },
   "dependencies": {
     "babel-core": "^6.2.1"
   },

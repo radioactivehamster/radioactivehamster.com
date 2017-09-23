@@ -9,6 +9,7 @@ var gulp        = require('gulp');
 var htmltidy    = require('gulp-htmltidy');
 var jsYaml      = require('js-yaml');
 var less        = require('gulp-less');
+var pkg         = require('./package.json');
 var stachio     = require('gulp-stachio');
 
 // Static server
@@ -31,11 +32,12 @@ gulp.task('style', () => {
 });
 
 gulp.task('template', () => {
-    let cname      = fs.readFileSync('./CNAME').toString().trim();
-    let htmltidyrc = jsYaml.load(fs.readFileSync('./.htmltidyrc').toString());
+    let analyticsId = pkg.config.analyticsId;
+    let cname       = fs.readFileSync('./CNAME').toString().trim();
+    let htmltidyrc  = jsYaml.load(fs.readFileSync('./.htmltidyrc').toString());
 
     return gulp.src('src/template/*.hbs')
-        .pipe(stachio({ cname: cname, timestamp: dateTime() }))
+        .pipe(stachio({ analyticsId, cname, timestamp: dateTime() }))
         .pipe(htmltidy(htmltidyrc))
         .pipe(gulp.dest('./'));
 });
